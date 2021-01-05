@@ -4,14 +4,13 @@
 
 options(repos = "http://cran.us.r-project.org")
 if (!require("pacman", quietly = TRUE)) install.packages("pacman")
-if (!require("BiocManager", quietly = TRUE)) install.packages("BiocManager")
-pacman::p_load(vroom, tidyr, tidyfast, dplyr, ggplot2, ggrepel)
+pacman::p_load(vroom, tidyr, tidyfast, dplyr, stringr, ggplot2, ggrepel)
 
 ###############################################################################
 # Download and format the data
 ###############################################################################
 
-tbl_raw <- vroom("ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3069nnn/GSM3069461/suppl/GSM3069461_SER6_DGE.txt.gz")
+tbl_raw <- vroom("https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM3069461&format=file&file=GSM3069461_SER6_DGE.txt.gz")
 
 tbl_tidy <-
     tbl_raw %>%
@@ -46,4 +45,4 @@ ggplot(tbl_mean_expression,
         text = element_text(size = 20),
         legend.position = "none")
 
-ggsave("SER6_Exoc.pdf", width = 6, height = 14)
+ggsave("SupFig2.pdf", width = 6, height = 14)
