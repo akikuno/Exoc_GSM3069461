@@ -1,6 +1,6 @@
 # Exoc GSM3069461
 
-Rscript used to analyze Exoc1-9 gene expression in [GSM3069461](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3069461) in the following paper ([Sup Fig 1s2](https://elifesciences.org/articles/59759/figures#fig1s2)).
+Rscript used to analyze Exoc1-8 gene expression in [GSM3069461](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3069461) in the following paper ([Sup Fig 1s2](https://elifesciences.org/articles/59759/figures#fig1s2)).
 
 ```
 @article{Osawa2021May,
